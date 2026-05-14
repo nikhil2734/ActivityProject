@@ -16,8 +16,7 @@ public class LoginServlet extends HttpServlet {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             // Establish connection - Ensure the hostname 'activity-db' matches your Render DB service name
-Connection con = DriverManager.getConnection("jdbc:mysql://activity-db:3306/activitydb", "root", "password123");
-            PreparedStatement ps = con.prepareStatement(
+Connection con = DriverManager.getConnection("jdbc:mysql://activity-db.onrender.com:3306/activitydb", "root", "password123");            PreparedStatement ps = con.prepareStatement(
                     "SELECT * FROM users WHERE username=? AND password=?");
 
             ps.setString(1, user);
