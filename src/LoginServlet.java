@@ -36,8 +36,12 @@ public class LoginServlet extends HttpServlet {
 
             con.close();
 
-        } catch (Exception e) {
-            e.printStackTrace();
+        } } catch (Exception e) {
+            response.setContentType("text/html");
+            PrintWriter out = response.getWriter();
+            out.println("<h3>Database Error:</h3><pre>");
+            e.printStackTrace(out); // This will show the error on the webpage
+            out.println("</pre>");
         }
     }
 }
