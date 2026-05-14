@@ -138,8 +138,7 @@
 <%
 try {
     Class.forName("com.mysql.cj.jdbc.Driver");
-    Connection con = DriverManager.getConnection(
-        "jdbc:mysql://localhost:3306/activitydb", "root", "nikhil@1234");
+   Connection con = DriverManager.getConnection("jdbc:mysql://activity-db:3306/activitydb", "root", "nikhil@1234");
 
     Statement st = con.createStatement();
     ResultSet rs = st.executeQuery("SELECT * FROM activity_log ORDER BY id DESC");
