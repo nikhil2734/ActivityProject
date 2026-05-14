@@ -16,8 +16,7 @@ public class ActivityServlet extends HttpServlet {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-           Connection con = DriverManager.getConnection("jdbc:mysql://srv-d82vq2m7r5hc73amn2ug:3306/activitydb", "root", "password123");
-
+Connection con = DriverManager.getConnection("jdbc:mysql://activity-db:3306/activitydb", "root", "password123");
             PreparedStatement ps = con.prepareStatement(
                     "INSERT INTO activity_log (username, action_performed) VALUES (?, ?)");
 
