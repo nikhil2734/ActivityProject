@@ -2,7 +2,7 @@
 FROM tomcat:10.1-jdk17
 
 # Remove default Tomcat apps to avoid confusion
-RUN rm -rf /usr/local/tomcat/webapps/*
+RUN rm -rf /usr/local/tomcat/webapps/ActivityProject
 
 # Copy your compiled project files into Tomcat's ROOT directory
 # This assumes your local folder structure matches the standard WAR layout
